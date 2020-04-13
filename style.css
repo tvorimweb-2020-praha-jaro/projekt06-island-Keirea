@@ -15,7 +15,7 @@ body {
     font-family: 'Merriweather', serif;
     font-size: 16px;
     line-height: 1.6;
-    
+    min-width: 360px;
 }
 
 .stranka {
@@ -55,26 +55,26 @@ body {
 /* MENU */
 
 .navigace {
-    /* background-color: #c99494; */
-	text-align: center;
 	padding: 30px;
+    /* background-color: burlywood; */
+}
+
+.menu {
+	list-style: none;
+    font-family: 'Raleway', serif;
+    text-transform: uppercase
 }
 
 .navigace a {
-	display: block;
+    display: block;
+    text-align: center;
 	padding: 5px 15px;
 	color: rgba(0, 0, 0, 0.5);
     text-decoration: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.menu {
-	list-style: none;
-	padding-left: 0;
-    margin: 0;
-    font-family: 'Raleway', serif;
-    text-transform: uppercase
-}
+
 
 /* OBSAH */
 
@@ -156,4 +156,31 @@ body {
 }
 .paticka a {
     color: rgba(0, 0, 0, 0.5);
+}
+
+/* TABLET */
+
+@media (min-width: 510px) {
+    body {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+  .navigace ul {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+  .navigace li {
+      flex: 1 1 0;
+    }
+
+  .navigace a {
+      border: none;
+      padding: 0;
+    }
+
 }
