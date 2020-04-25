@@ -7,7 +7,6 @@
  Jedeme retro cernobile, dnes barvy nepotrebujeme.
 */
 
-
 body {
     margin: 0;
     padding: 0;
@@ -68,6 +67,9 @@ ul.menu {
 	color: rgba(0, 0, 0, 0.5);
     text-decoration: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.navigace a:hover {
+    font-weight: bold;
 }
 
 
@@ -164,27 +166,36 @@ strong {
 
 @media (min-width: 500px) {
     body {
-        /* max-width: 1000px; */
         margin: auto;
     }
 
-  .navigace ul {
-      display: flex;
-      justify-content: space-around;
-      padding: 10px;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-      border-top: 1px solid rgba(0, 0, 0, 0.1);
-      }
-
-  .navigace li {
-      flex: 1 1 0;
+    .navigace ul {
+        display: flex;
+        justify-content: space-around;
     }
 
-  .navigace a {
-      border: none;
-      padding: 0;
+    .menu li {
+        flex: 1 1 0;
+        padding: 10px;
     }
-  
+
+    .navigace a {
+        border: none;
+        padding: 0;
+    }
+
+    .menu li {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+        
+    .menu li:nth-child(odd) {
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .menu li:nth-child(2) {
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
     .foto-sec1 {
         position: relative;
     }
@@ -193,29 +204,45 @@ strong {
         position: absolute;
         color: white;
         right: 10px;
-	    bottom: 10px;
+        bottom: 10px;
     }
     .popisek-sec1 a {
         color: white;
     }
 
 
-  .galerie {
-      display: flex;
-      flex-wrap: wrap;
-      padding-bottom: 0;
-      line-height: 0;
-      
-    }
+  /* GALERIE TABLET */
 
+    .galerie {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 0;
+        line-height: 0;
+    }
     .foto {
+        position: relative;
         width: 50%;
+        margin: 0;
+        overflow: hidden;
+        margin-bottom: 0;
     }
-
-    .foto p {
-        display: none;
+    .popisek-gal {
+        line-height: 1.6;
+        padding-top: 10px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        transition: transform 0.3s ease-in;
+        transform: translateY(100%);
     }
-
+    .foto:hover .popisek-gal {
+        transform: translateY(0);
+    }
+    .popisek-gal a {
+        color: white;
+    }
 }
 
 /* PC */
@@ -255,16 +282,22 @@ strong {
     }
     .navigace ul {
         display: block;
-        border: none;
         padding: 0;
     }
-    .navigace a {
+    .menu a {
         text-align: left;
-        padding: 10px;
-        /* padding-top: 0; */
         color: rgba(0, 0, 0, 0.5);
         text-decoration: none;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .menu li {
+        border-top: none;
+    }
+    .menu li:nth-child(odd) {
+        border-right: none;
+    }
+    .menu li:nth-child(2) {
+        border-right: none;
     }
 
     .úvod {
