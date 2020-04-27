@@ -168,6 +168,15 @@ strong {
     body {
         margin: auto;
     }
+    
+    .hlavicka {
+        background-position: center;
+    }
+
+    .perex {
+        max-width: 860px;
+        margin: auto;
+    }
 
     .navigace ul {
         display: flex;
@@ -256,12 +265,10 @@ strong {
     .hlavicka {
         margin: auto;
         padding: 50px 50px 100px 50px;
+        background-position: center;
     }
     .titulek {
         font-size: 5rem;
-    }
-    .perex {
-        margin: 30px 160px;
     }
 
     .stranka {
